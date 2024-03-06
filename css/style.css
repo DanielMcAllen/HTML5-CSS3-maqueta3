@@ -1,0 +1,181 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    width: 90%;
+    margin: 40px auto;
+    min-height: 500px;
+    border: 1px solid rgba(255, 255, 226, 0.8);
+    box-shadow: 0px 0px 10px #ccc;
+}
+#header{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    border-bottom: 1px solid #F1F1F1;
+}
+#header h1{
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px #ccc;
+    font-style: italic;
+    font-size: 35px;
+}
+#nav ul{
+    display: flex;
+    flex-flow: row wrap;
+    list-style: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+#nav ul li{
+    margin: 0 25px;
+}
+#nav ul li a{
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    transition: all 300ms;
+}
+#nav ul li a:hover{
+    color: white;
+    background-color: #ccc;
+}
+#main{
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: space-between;
+}
+#aside{
+    flex-basis: 20%; /* ANCHURA DE LA BARRA LATERIAL = 20% (EL OTRO 80% LO TIENE PROJECTS) */
+    text-align: center;
+}
+#aside h3{
+    font-weight: 100;
+    color: #444444;
+    padding: 10px;
+    margin: 20px;
+    border-bottom: 1px solid #ccc;
+}
+#aside ul{
+    list-style: none;
+}
+#aside ul li{
+    margin: 20px;
+}
+#aside ul li a{
+    display: block;
+    background-color: #EEEEEE;
+    padding: 20px;
+    color: #444444;
+    text-decoration: none;
+    transition: all 300ms;
+}
+#aside ul li a:hover{
+    background-color: #444444;
+    color: #EEEEEE;
+}
+#projects{
+    display: flex;
+    flex-flow: row wrap;
+    flex-basis: 80%;
+}
+.project{
+    flex-grow: 1;
+    margin: 10px;
+    border: 1px solid #ccc;
+    transition: all 200ms;
+}
+.project:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 10px #ccc;
+}
+.project:hover{
+    color: green;
+}
+.project .img-wrap img{
+    width: 100%;
+    height: auto;
+}
+.project-info{
+    padding: 10px;
+}
+.project-info a{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+.project:hover .project-info a{
+    color: green;
+}
+.project-info p{
+    color: rgba(0, 0, 0, 0.4);
+}
+#footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    border-top: 1px solid #F1F1F1;
+}
+#footer h4{
+    color: #808080;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px #ccc;
+    font-style: italic;
+    font-size: 35px;
+}
+/* MEDIA QUERY */
+@media (max-width: 965px){
+    .container{
+        width: 100%;
+        margin: 0;
+    }
+    #header{
+        justify-content: center;
+    }
+    #footer{
+        justify-content: center;
+    }
+    #footer h4{
+        display: none;
+    }
+}
+@media (max-width: 868px){
+    #header #nav ul{
+        margin-top: 25px;
+    }
+    #main{
+        display: flex;
+        flex-flow: column wrap;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        justify-content: space-between;
+    }
+}
+@media (max-width: 645px){
+    #header #nav ul{
+        justify-content: center;
+        font-size: 12px;
+    }
+    #header #nav ul li{
+        margin: 20px;
+    }
+    #aside > ul{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+    #aside > ul > li{
+        flex-grow: 1;
+    }
+    #footer span{
+        display: none;
+    }
+}
